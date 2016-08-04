@@ -1,0 +1,112 @@
+{
+	"machines": [
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 1",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 2",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 3",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 4",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 5",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 6",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 7",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 8",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 9",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 10",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-526.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 11",
+		  "model":"TM526",
+		  "lastcloudupload":"Jan 01, 2016"
+	   },
+	   {
+		  "title":"Guhring, Inc.",
+		  "image":"http://vending.guhring.com/Images/TM-426-Spiral-Unit.png",
+		  "location":"Brookfield, WI",
+		  "user":"Guhring, Inc.",
+		  "machine":"Carbide Division 12",
+		  "model":"TM426",
+		  "lastcloudupload":"Jan 01, 2016"
+	   }   
+	]
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="165dp"
+            android:text="@string/login_banner_text"
+            android:gravity="center"
+            android:background="@drawable/fullscreenrender"
+            android:layout_weight="0.23"
+            android:paddingTop="100dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textIsSelectable="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginTop="15dip"
+
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:src="@drawable/ic_lock_black_48dp"
+                android:layout_weight="0.23" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:text="@string/login_title"
+
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/loginUsername"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="textEmailAddress" />
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/login_error"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:textColor="#e30000"
+                android:textStyle="bold" />
+
+            <!--<CheckBox
+                android:id="@+id/remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember"/>-->
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="#FED10a"
+                android:onClick="loginUser"
+                android:text="Sign In"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/poweredby"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:src="@drawable/cloud_guhring"
+            android:layout_weight="0.23" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

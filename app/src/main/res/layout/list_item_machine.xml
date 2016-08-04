@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="350dp">
+  <TextView
+      android:id="@+id/machine_list_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:textSize="20sp"
+      tools:text="Title"
+      android:textStyle="bold"
+      android:background="#dbdbdf" />
+
+  <ImageView
+      android:id="@+id/machine_list_thumbnail"
+      android:layout_width="150dp"
+      android:layout_height="150dp"
+      android:scaleType="centerInside"
+      tools:src="@mipmap/ic_launcher"
+      android:contentDescription="@string/thumbnail"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentEnd="true"
+      android:paddingBottom="5dp"
+      android:paddingTop="10dp"
+      android:background="#ECEFF1"
+      android:layout_below="@+id/machine_list_title" />
+
+
+
+  <!--<TextView
+      android:id="@+id/machine_list_detail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="4dp"
+      android:layout_marginLeft="4dp"
+      android:layout_marginEnd="2dp"
+      android:layout_marginRight="2dp"
+      android:maxLines="1"
+      android:paddingEnd="4dp"
+      android:paddingRight="4dp"
+      android:textColor="#000000"
+      android:textSize="12sp"
+      tools:text="Detail"
+      />-->
+
+  <TableLayout
+      android:id="@+id/machine_list_table_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/machine_list_thumbnail"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true">
+
+    <TableRow
+        android:background="#FED10a"
+        android:padding="5dp">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="User" />
+      <TextView
+          android:id="@+id/machine_list_user"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textStyle="bold"
+          tools:text="User" />
+    </TableRow>
+    <TableRow
+        android:background="#ECEFF1"
+        android:padding="5dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Machine" />
+      <TextView
+          android:id="@+id/machine_list_machine"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textStyle="bold"
+          tools:text="Machine" />
+    </TableRow>
+    <TableRow
+        android:background="#ECEFF1"
+        android:padding="5dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Location" />
+      <TextView
+          android:id="@+id/machine_list_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textStyle="bold"
+          tools:text="Location" />
+    </TableRow>
+    <TableRow
+        android:background="#ECEFF1"
+        android:padding="5dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Model" />
+      <TextView
+          android:id="@+id/machine_list_model"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textStyle="bold"
+          tools:text="Model" />
+    </TableRow>
+    <TableRow
+        android:background="#ECEFF1"
+        android:padding="5dp">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="Last Cloud Upload" />
+      <TextView
+          android:id="@+id/machine_list_lastcloudupload"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:textStyle="bold"
+          tools:text="Last Cloud Upload" />
+    </TableRow>
+
+
+
+
+  </TableLayout>
+</RelativeLayout>
