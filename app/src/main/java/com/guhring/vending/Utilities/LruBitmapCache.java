@@ -1,4 +1,4 @@
-package com.guhring.vending.Utilities;
+package com.guhring.vending.utilities;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;

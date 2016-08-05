@@ -1,7 +1,6 @@
-package com.guhring.vending.Utilities;
+package com.guhring.vending.utilities;
 
 import com.google.gson.GsonBuilder;
-import org.apache.http.*;
 import org.apache.http.*;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpDelete;

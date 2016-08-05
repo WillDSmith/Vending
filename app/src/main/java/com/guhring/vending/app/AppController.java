@@ -7,7 +7,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
-import com.guhring.vending.Utilities.LruBitmapCache;
+import com.guhring.vending.utilities.LruBitmapCache;
 
 /**
  * Created by SmithW on 8/3/2016.

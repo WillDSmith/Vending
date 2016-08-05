@@ -17,4 +17,6 @@
     <string name="thumbnail">thumbnail</string>
     <string name="searchTitle">Search</string>
     <string name="searchHint">Search...</string>
+    <string name="fa_circle"></string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.guhring.vending.Utilities;
+package com.guhring.vending.utilities;
 
 import org.json.JSONException;
 import org.json.JSONObject;

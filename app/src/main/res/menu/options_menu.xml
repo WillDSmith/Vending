@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:com.vending="http://schemas.android.com/apk/res-auto">
+    xmlns:com.vending="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <item android:id="@+id/search"
-        android:title="@string/searchTitle"
+        android:title="Search"
         android:icon="@android:drawable/ic_menu_search"
-        com.vending:showAsAction="collapseActionView|ifRoom"
-        android:actionViewClass="android.widget.SearchView" />
+        com.vending:showAsAction="collapseActionView|always"
+        com.vending:actionViewClass="android.support.v7.widget.SearchView"
+        android:layout_width="wrap_content" />
 </menu>
 
 

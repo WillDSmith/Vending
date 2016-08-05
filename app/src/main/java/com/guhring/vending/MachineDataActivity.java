@@ -1,26 +1,33 @@
 package com.guhring.vending;
 
-import android.app.SearchManager;
-import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.guhring.vending.adapters.MachineAdapter;
+import com.guhring.vending.helpers.FontManager;
 import com.guhring.vending.models.Machine;
 
+import org.w3c.dom.Text;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MachineDataActivity extends AppCompatActivity {
 
-    private SearchView searchView;
-    private MenuItem searchMenuItem;
+    private MachineAdapter adapter;
+    private ListView mListView;
+    private ArrayList<Machine> machineList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,29 +37,76 @@ public class MachineDataActivity extends AppCompatActivity {
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setContentView(R.layout.machinedata);
 
-        ListView mListView = (ListView) findViewById(R.id.machine_list_view);
-        final ArrayList<Machine> machineList = Machine.getMachinesFromFile("machines.json", this);
-        MachineAdapter adapter = new MachineAdapter(this, machineList);
+        /*Typeface fontFamily = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        TextView sampleText = (TextView) findViewById(R.id.machine_list_dot);
+        sampleText.setTypeface(fontFamily);
+        sampleText.setText("\uF111");*/
+
+        mListView = (ListView) findViewById(R.id.machine_list_view);
+        machineList = Machine.getMachinesFromFile("machines.json", this);
+        adapter = new MachineAdapter(this, machineList);
         if (mListView != null) {
             mListView.setAdapter(adapter);
+
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        MenuItem searchItem = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        //*** setOnQueryTextFocusChangeListener ***
 
-        /*SearchManager searchManager = (SearchManager)
-                getSystemService(Context.SEARCH_SERVICE);
-        searchMenuItem = menu.findItem(R.id.search);
-        searchView = (SearchView) searchMenuItem.getActionView();
+        searchView.setOnQueryTextFocusChangeListener(new View.OnFocusChangeListener() {
 
-        searchView.setSearchableInfo(searchManager.
-                getSearchableInfo(getComponentName()));
-        searchView.setSubmitButtonEnabled(true);*/
-        /*searchView.setOnQueryTextListener(this);*/
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
 
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String searchQuery) {
+                adapter.filter(searchQuery.toString().trim());
+                mListView.invalidate();
+                return true;
+            }
+        });
+
+        MenuItemCompat.setOnActionExpandListener(searchItem, new MenuItemCompat.OnActionExpandListener() {
+
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem menuItem) {
+                return true;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem menuItem) {
+                return true;
+            }
+        });
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.search) {
+
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
