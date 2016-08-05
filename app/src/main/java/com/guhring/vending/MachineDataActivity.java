@@ -1,5 +1,7 @@
 package com.guhring.vending;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
@@ -11,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -49,6 +52,18 @@ public class MachineDataActivity extends AppCompatActivity {
             mListView.setAdapter(adapter);
 
         }
+
+        final Context context = this;
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Machine selectedMachine = machineList.get(position);
+                Intent detailIntent = new Intent(context, MachineDetailActivity.class);
+                detailIntent.putExtra("title", selectedMachine.title);
+                startActivity(detailIntent);
+            }
+        });
     }
 
     @Override
