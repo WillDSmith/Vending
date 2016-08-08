@@ -16,7 +16,7 @@
     <string name="action_settings">Settings</string>
     <string name="thumbnail">thumbnail</string>
     <string name="searchTitle">Search</string>
-    <string name="searchHint">Search...</string>
+    <string name="searchHint">Search The Machines List</string>
     <string name="fa_circle"></string>
 
 </resources>

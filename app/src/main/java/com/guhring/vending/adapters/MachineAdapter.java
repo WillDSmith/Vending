@@ -2,6 +2,7 @@ package com.guhring.vending.adapters;
 
 import android.content.Context;
 import android.graphics.Typeface;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,40 +56,64 @@ public class MachineAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
 
+        if(convertView == null) {
+            convertView = mInflater.inflate(R.layout.list_item_machine, parent, false);
 
-        // Get view for row item
-        View rowView = mInflater.inflate(R.layout.list_item_machine, parent, false);
-        // Get title element
-        TextView titleTextView = (TextView) rowView.findViewById(R.id.machine_list_title);
-        // Get thumbnail element
-        ImageView thumbnailImageView = (ImageView) rowView.findViewById(R.id.machine_list_thumbnail);
-        // Get location element
-        TextView locationTextView = (TextView) rowView.findViewById(R.id.machine_list_location);
-        // Get user element
-        TextView userTextView = (TextView) rowView.findViewById(R.id.machine_list_user);
-        // Get machine element
-        TextView machineTextView = (TextView) rowView.findViewById(R.id.machine_list_machine);
-        // Get model element
-        TextView modelTextView = (TextView) rowView.findViewById(R.id.machine_list_model);
-        // Get lastcloudupload element
-        TextView lastclouduploadTextView = (TextView) rowView.findViewById(R.id.machine_list_lastcloudupload);
-        // Get dot element
-        fontFamily = Typeface.createFromAsset(mContext.getAssets(), "fontawesome-webfont.ttf");
-        TextView dotTextView = (TextView) rowView.findViewById(R.id.machine_list_dot);
-        dotTextView.setTypeface(fontFamily);
+            holder = new ViewHolder();
+            holder.titleTextView = (TextView) convertView.findViewById(R.id.machine_list_title);
+            holder.locationTextView = (TextView) convertView.findViewById(R.id.machine_list_location);
+            holder.userTextView = (TextView) convertView.findViewById(R.id.machine_list_user);
+            holder.machineTextView = (TextView) convertView.findViewById(R.id.machine_list_machine);
+            holder.modelTextView = (TextView) convertView.findViewById(R.id.machine_list_model);
+            holder.lastclouduploadTextView = (TextView) convertView.findViewById(R.id.machine_list_lastcloudupload);
+            holder.thumbnailImageView = (ImageView) convertView.findViewById(R.id.machine_list_thumbnail);
+            holder.dotTextView = (TextView) convertView.findViewById((R.id.machine_list_dot));
+
+            convertView.setTag(holder);
+        }else{
+            holder = (ViewHolder) convertView.getTag();
+        }
+
+        TextView titleTextView = holder.titleTextView;
+        TextView locationTextView = holder.locationTextView;
+        TextView userTextView = holder.userTextView;
+        TextView machineTextView = holder.machineTextView;
+        TextView modelTextView = holder.modelTextView;
+        TextView lastclouduploadTextView = holder.lastclouduploadTextView;
+        ImageView thumbnailImageView = holder.thumbnailImageView;
+        TextView dotTextView = holder.dotTextView;
+
 
         Machine machine = (Machine) getItem(position);
+
         titleTextView.setText(machine.title);
         locationTextView.setText(machine.location);
         userTextView.setText(machine.user);
         machineTextView.setText(machine.machine);
         modelTextView.setText(machine.model);
         lastclouduploadTextView.setText(machine.lastcloudupload);
+
+        fontFamily = Typeface.createFromAsset(mContext.getAssets(), "fontawesome-webfont.ttf");
+        dotTextView.setTypeface(fontFamily);
         dotTextView.setText("\uF111");
 
         Picasso.with(mContext).load(machine.imageUrl).placeholder(R.mipmap.ic_launcher).into(thumbnailImageView);
-        return rowView;
+        return convertView;
+    }
+
+    // Implement a ViewHolder Class which stores each of the row's subviews,
+    // and in turn is stored inside the tag field of the layout
+    private static class ViewHolder {
+        public TextView  titleTextView;
+        public ImageView thumbnailImageView;
+        public TextView  locationTextView;
+        public TextView  userTextView;
+        public TextView  machineTextView;
+        public TextView  modelTextView;
+        public TextView  lastclouduploadTextView;
+        public TextView  dotTextView;
     }
 
     public void filter(String charText) {
