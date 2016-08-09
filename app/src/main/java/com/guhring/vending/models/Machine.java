@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Created by SmithW on 8/4/2016.
  */
 public class Machine {
-
+    public String id;
     public String title;
     public String imageUrl;
     public String location;
@@ -35,6 +35,7 @@ public class Machine {
             for(int i = 0; i < machines.length(); i++){
                 Machine machine = new Machine();
 
+                machine.id = machines.getJSONObject(i).getString("id");
                 machine.title = machines.getJSONObject(i).getString("title");
                 machine.imageUrl = machines.getJSONObject(i).getString("image");
                 machine.location = machines.getJSONObject(i).getString("location");

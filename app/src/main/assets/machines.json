@@ -1,49 +1,54 @@
 {
 	"machines": [
 	   {
-		  "title":"Guhring, Inc.",
-		  "image":"http://vending.guhring.com/Images/TM-326.png",
-		  "location":"Brookfield, WI",
-		  "user":"Guhring, Inc.",
-		  "machine":"Carbide Division",
-		  "model":"TM326",
-		  "lastcloudupload":"Aug 05, 2016"
+		   "id" : "1",
+		   "title":"Guhring, Inc.",
+		   "image":"http://vending.guhring.com/Images/TM-326.png",
+		   "location":"Brookfield, WI",
+		   "user":"Guhring, Inc.",
+		   "machine":"Carbide Division",
+		   "model":"TM326",
+		   "lastcloudupload":"Aug 05, 2016"
 	   },
 	   {
-		  "title":"Guhring, Inc.",
-		  "image":"http://vending.guhring.com/Images/TM-326.png",
-		  "location":"Brookfield, WI",
-		  "user":"Guhring, Inc.",
-		  "machine":"Stock Room",
-		  "model":"TM326",
-		  "lastcloudupload":"Aug 05, 2016"
+		   "id" : "2",
+		   "title":"Guhring, Inc.",
+		   "image":"http://vending.guhring.com/Images/TM-326.png",
+		   "location":"Brookfield, WI",
+		   "user":"Guhring, Inc.",
+		   "machine":"Stock Room",
+		   "model":"TM326",
+		   "lastcloudupload":"Aug 05, 2016"
 	   },
 	   {
-		  "title":"Midway Industrial",
-		  "image":"http://vending.guhring.com/Images/TM-326.png",
-		  "location":"Rochester, NY",
-		  "user":"Addison Precision",
-		  "machine":"",
-		  "model":"TM326",
-		  "lastcloudupload":"Aug 05, 2016"
+		   "id" : "3",
+		   "title":"Midway Industrial",
+		   "image":"http://vending.guhring.com/Images/TM-326.png",
+		   "location":"Rochester, NY",
+		   "user":"Addison Precision",
+		   "machine":"",
+		   "model":"TM326",
+		   "lastcloudupload":"Aug 05, 2016"
 	   },
 	   {
-		  "title":"Midway Industrial",
-		  "image":"http://vending.guhring.com/Images/TM-326.png",
-		  "location":"New Hartford, NY",
-		  "user":"Riverhawk",
-		  "machine":"",
-		  "model":"TM326",
-		  "lastcloudupload":"Aug 05, 2016"
+		   "id" : "4",
+		   "title":"Midway Industrial",
+		   "image":"http://vending.guhring.com/Images/TM-326.png",
+		   "location":"New Hartford, NY",
+		   "user":"Riverhawk",
+		   "machine":"",
+		   "model":"TM326",
+		   "lastcloudupload":"Aug 05, 2016"
 	   },
 	   {
-		  "title":"Guhring, Inc.",
-		  "image":"http://vending.guhring.com/Images/TM-526.png",
-		  "location":"Brookfield, WI",
-		  "user":"Guhring, Inc.",
-		  "machine":"Carbide Division 5",
-		  "model":"TM526",
-		  "lastcloudupload":"Jan 01, 2016"
+		   "id" : "5",
+		   "title":"Guhring, Inc.",
+		   "image":"http://vending.guhring.com/Images/TM-526.png",
+		   "location":"Brookfield, WI",
+		   "user":"Guhring, Inc.",
+		   "machine":"Carbide Division 5",
+		   "model":"TM526",
+		   "lastcloudupload":"Jan 01, 2016"
 	   }
 	]
 }

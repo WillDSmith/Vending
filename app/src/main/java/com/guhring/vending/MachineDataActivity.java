@@ -2,28 +2,21 @@ package com.guhring.vending;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.guhring.vending.adapters.MachineAdapter;
-import com.guhring.vending.helpers.FontManager;
 import com.guhring.vending.models.Machine;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class MachineDataActivity extends AppCompatActivity {
@@ -59,8 +52,9 @@ public class MachineDataActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Machine selectedMachine = machineList.get(position);
-                Intent detailIntent = new Intent(context, MachineDetailActivity.class);
+                Intent detailIntent = new Intent(context, MachineReportsActivity.class);
                 detailIntent.putExtra("title", selectedMachine.title);
+                detailIntent.putExtra("id", selectedMachine.id);
                 startActivity(detailIntent);
             }
         });

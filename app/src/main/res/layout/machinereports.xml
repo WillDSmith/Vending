@@ -8,14 +8,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MachineDataActivity">
+    tools:context=".MachineReportsActivity">
 
-   <ListView
-       android:id="@+id/machine_list_view"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:divider="@color/list_divider"
-       android:dividerHeight="1dp"
-       android:listSelector="@drawable/list_row_selector" />
+    <ListView
+        android:id="@+id/machine_report_list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_row_selector" />
 
 </LinearLayout>

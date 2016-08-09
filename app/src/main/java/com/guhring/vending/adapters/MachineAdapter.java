@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.guhring.vending.R;
-import com.guhring.vending.helpers.FontManager;
 import com.guhring.vending.models.Machine;
 import com.squareup.picasso.Picasso;
 
@@ -59,7 +58,7 @@ public class MachineAdapter extends BaseAdapter {
         ViewHolder holder;
 
         if(convertView == null) {
-            convertView = mInflater.inflate(R.layout.list_item_machine, parent, false);
+            convertView = mInflater.inflate(R.layout.list_item_machine_data, parent, false);
 
             holder = new ViewHolder();
             holder.titleTextView = (TextView) convertView.findViewById(R.id.machine_list_title);
