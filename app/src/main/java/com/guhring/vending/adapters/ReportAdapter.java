@@ -29,7 +29,6 @@ public class ReportAdapter extends BaseAdapter {
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         arrayList = new ArrayList<Report>();
         arrayList.addAll(mDataSource);
-
     }
 
     @Override
@@ -57,6 +56,13 @@ public class ReportAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.titleTextView = (TextView) convertView.findViewById(R.id.reports_list_title);
             holder.subTitleTextView = (TextView) convertView.findViewById(R.id.reports_list_subtitle);
+            holder.dateTextView = (TextView) convertView.findViewById(R.id.reports_list_date);
+            holder.reportOneTextView = (TextView) convertView.findViewById(R.id.reports_list_reportName);
+            holder.reportTwoTextView = (TextView) convertView.findViewById(R.id.reports_list_reportCount);
+            holder.reportThreeTextView = (TextView) convertView.findViewById(R.id.reports_list_reportName02);
+            holder.reportFourTextView = (TextView) convertView.findViewById(R.id.reports_list_reportCount02);
+            holder.reportFiveTextView = (TextView) convertView.findViewById(R.id.reports_list_reportName03);
+            holder.reportSixTextView = (TextView) convertView.findViewById(R.id.reports_list_reportCount03);
 
 
             convertView.setTag(holder);
@@ -66,11 +72,26 @@ public class ReportAdapter extends BaseAdapter {
 
         TextView titleTextView = holder.titleTextView;
         TextView subTitleTextView = holder.subTitleTextView;
+        TextView dateTextView = holder.dateTextView;
+        TextView reportOneTextView = holder.reportOneTextView;
+        TextView reportTwoTextView = holder.reportTwoTextView;
+        TextView reportThreeTextView = holder.reportThreeTextView;
+        TextView reportFourTextView = holder.reportFourTextView;
+        TextView reportFiveTextView = holder.reportFiveTextView;
+        TextView reportSixTextView = holder.reportSixTextView;
+
 
         Report report = (Report) getItem(position);
 
         titleTextView.setText(report.title);
         subTitleTextView.setText(report.subtitle);
+        dateTextView.setText(report.date);
+        reportOneTextView.setText(report.machinereports.get(0));
+        reportTwoTextView.setText(report.machinereports.get(1));
+        reportThreeTextView.setText(report.machinereports.get(2));
+        reportFourTextView.setText(report.machinereports.get(3));
+        reportFiveTextView.setText(report.machinereports.get(4));
+        reportSixTextView.setText(report.machinereports.get(5));
 
         return convertView;
     }
@@ -80,6 +101,13 @@ public class ReportAdapter extends BaseAdapter {
     private static class ViewHolder {
         public TextView  titleTextView;
         public TextView  subTitleTextView;
+        public TextView  dateTextView;
+        public TextView  reportOneTextView;
+        public TextView  reportTwoTextView;
+        public TextView  reportThreeTextView;
+        public TextView  reportFourTextView;
+        public TextView  reportFiveTextView;
+        public TextView  reportSixTextView;
 
     }
 }

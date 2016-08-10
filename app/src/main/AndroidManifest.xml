@@ -23,7 +23,11 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".MachineReportsActivity"></activity>
+        <activity
+            android:name=".MachineReportsActivity"
+            android:label="Dashboard">
+
+        </activity>
     </application>
 
 </manifest>

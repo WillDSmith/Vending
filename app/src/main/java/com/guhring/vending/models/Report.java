@@ -1,6 +1,9 @@
 package com.guhring.vending.models;
 
 import android.content.Context;
+import android.util.Log;
+
+import com.google.gson.JsonArray;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,32 +17,42 @@ import java.util.List;
  * Created by SmithW on 8/9/2016.
  */
 public class Report {
-    public int id;
+    public String id;
     public String title;
     public String subtitle;
     public String date;
-    public List<String> listOfReports;
-
+    public ArrayList<String> machinereports = new ArrayList<>();
 
     public static ArrayList<Report> getReportsFromFile(String filename, Context context) {
         final ArrayList<Report> reportList = new ArrayList<>();
 
         try {
             // Load Data
-            String data = loadJsonFromAsset("reports.json", context);
-            JSONObject json = new JSONObject(data);
-            JSONArray reports = json.getJSONArray("reports");
+            String jsonStr = loadJsonFromAsset("reports.json", context);
+            JSONObject jsonOne = new JSONObject(jsonStr);
+            JSONArray reports = jsonOne.getJSONArray("reports");
+
 
             // Get Report objects from data
             for(int i = 0; i < reports.length(); i++) {
                 Report report = new Report();
 
-                report.id = reports.getJSONObject(i).getInt("id");
+                report.id = reports.getJSONObject(i).getString("id");
                 report.title = reports.getJSONObject(i).getString("title");
                 report.subtitle = reports.getJSONObject(i).getString("subtitle");
                 report.date = reports.getJSONObject(i).getString("date");
 
+                // Get inner array listOrReports
+                /* JSONArray rList = jsonOne.getJSONArray("machinereports");*/
+                JSONArray rList = reports.getJSONObject(i).getJSONArray("machinereports");
+
+                for(int j = 0; j < rList.length(); j++) {
+                    JSONObject jsonTwo = rList.getJSONObject(j);
+                    report.machinereports.add(jsonTwo.getString("name"));
+                    report.machinereports.add(jsonTwo.getString("count"));
+                }
                 reportList.add(report);
+
             }
 
         } catch (JSONException e) {
